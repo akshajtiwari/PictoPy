@@ -27,5 +27,19 @@ if os.getenv("GITHUB_ACTIONS") == "true":
     DATABASE_PATH = os.path.join(os.getcwd(), "test_db.sqlite3")
 else:
     DATABASE_PATH = os.path.join(user_data_dir("PictoPy"), "database", "PictoPy.db")
-THUMBNAIL_IMAGES_PATH = "./images/thumbnails"
-IMAGES_PATH = "./images"
+if os.getenv("GITHUB_ACTIONS") == "true":
+    IMAGES_PATH = os.path.join(os.getcwd(), "images")
+    THUMBNAIL_IMAGES_PATH = os.path.join(os.getcwd(), "images", "thumbnails")
+else:
+    IMAGES_PATH = os.path.join(
+        user_data_dir("PictoPy"),
+        "images"
+    )
+    THUMBNAIL_IMAGES_PATH = os.path.join(
+        user_data_dir("PictoPy"),
+        "images",
+        "thumbnails"
+    )
+
+os.makedirs(IMAGES_PATH, exist_ok=True)
+os.makedirs(THUMBNAIL_IMAGES_PATH, exist_ok=True)
