@@ -363,6 +363,7 @@ jobs:
         with:
           projectPath: ./frontend
           tagName: ${{ github.event.release.tag_name || github.event.inputs.tag }}
+          releaseName: ${{ github.event.release.tag_name || github.event.inputs.tag }}
           includeUpdaterJson: false
           releaseId: ${{ github.event.release.id || '' }}
           releaseDraft: false
