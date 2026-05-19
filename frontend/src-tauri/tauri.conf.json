@@ -61,7 +61,7 @@
       "assetProtocol": {
         "scope": [
         "$HOME/.local/share/PictoPy/thumbnails/**",
-        "$APPDATA/Local/PictoPy/PictoPy/thumbnails/**",
+        "$APPLOCALDATA/PictoPy/thumbnails/**",
         "$HOME/Library/Application Support/PictoPy/thumbnails/**"
       ],
         "enable": true
