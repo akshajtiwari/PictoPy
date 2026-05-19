@@ -60,9 +60,9 @@
     "security": {
       "assetProtocol": {
         "scope": [
-        "$HOME/.local/share/PictoPy/thumbnails/**",
-        "$APPDATA/local/PictoPy/PictoPy/thumbnails/**",
-        "$HOME/Library/Application Support/PictoPy/thumbnails/**"
+        "$HOME/.local/share/PictoPy/thumbnails/**", #Linux supported path
+        "$APPDATA/Local/PictoPy/PictoPy/thumbnails/**", #Windows supported path
+        "$HOME/Library/Application Support/PictoPy/thumbnails/**" #Mac supported path
       ],
         "enable": true
       },
