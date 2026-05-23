@@ -92,4 +92,4 @@ jobs:
           commit_message: v${{ needs.update_version.outputs.latest_version }}
           ssh_keyscan_types: rsa,ecdsa,ed25519
           updpkgsums: false
-          allow_empty_commits: false
+          allow_empty_commits: false 
